@@ -321,7 +321,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-forest-500 hover:text-forest-400 underline transition-colors"
                 >
-                  Desenzano del Garda, come Pro Desenzano
+                  Desenzano del Garda, come SSD Pro Desenzano
                 </Link>
                 .
               </p>
