@@ -96,7 +96,7 @@ export default function InstructorCarousel() {
   }, []) // Empty dependency array ensures this runs only once on mount
 
   return (
-    <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+    <Carousel opts={{ loop: true, align: "start", slidesToScroll: 1 }} className="w-full">
       <CarouselContent className="-ml-4">
         {shuffledInstructors.map((instructor) => (
           <CarouselItem key={instructor.id} className="pl-4 w-full sm:w-1/2 lg:w-1/3">
