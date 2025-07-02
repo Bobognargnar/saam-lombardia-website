@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
 
 interface Instructor {
   id: number
@@ -90,60 +90,16 @@ export default function InstructorCarousel() {
   ]
 
   const [shuffledInstructors, setShuffledInstructors] = useState<Instructor[]>([])
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const carouselRef = useRef<HTMLDivElement>(null)
-  const [visibleCards, setVisibleCards] = useState(3)
 
   useEffect(() => {
     setShuffledInstructors(shuffleArray([...initialInstructors]))
   }, []) // Empty dependency array ensures this runs only once on mount
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setVisibleCards(1)
-      } else if (window.innerWidth < 1024) {
-        setVisibleCards(2)
-      } else {
-        setVisibleCards(3)
-      }
-    }
-
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  const totalSlides = Math.ceil(shuffledInstructors.length / visibleCards)
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === totalSlides - 1 ? 0 : prevIndex + 1))
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? totalSlides - 1 : prevIndex - 1))
-  }
-
-  const getVisibleInstructors = () => {
-    const startIdx = currentIndex * visibleCards
-    return shuffledInstructors.slice(startIdx, startIdx + visibleCards)
-  }
-
   return (
-    <div className="relative">
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
-        <button
-          onClick={prevSlide}
-          className="bg-forest-900/70 hover:bg-forest-900 text-white p-2 rounded-full ml-2"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </button>
-      </div>
-
-      <div ref={carouselRef} className="flex transition-all duration-500 ease-in-out overflow-hidden">
-        {getVisibleInstructors().map((instructor) => (
-          <div key={instructor.id} className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-4">
+    <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+      <CarouselContent className="-ml-4">
+        {shuffledInstructors.map((instructor) => (
+          <CarouselItem key={instructor.id} className="pl-4 w-full sm:w-1/2 lg:w-1/3">
             <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 h-full">
               <div className="relative h-80 overflow-hidden group rounded-t-2xl">
                 <Image
@@ -159,30 +115,11 @@ export default function InstructorCarousel() {
                 <p className="text-gray-300 text-sm">{instructor.bio}</p>
               </div>
             </div>
-          </div>
+          </CarouselItem>
         ))}
-      </div>
-
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10">
-        <button
-          onClick={nextSlide}
-          className="bg-forest-900/70 hover:bg-forest-900 text-white p-2 rounded-full mr-2"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="h-6 w-6" />
-        </button>
-      </div>
-
-      <div className="flex justify-center mt-4 gap-2">
-        {Array.from({ length: totalSlides }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full ${currentIndex === index ? "bg-forest-500" : "bg-white opacity-50"}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
+      </CarouselContent>
+      <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-forest-900/70 hover:bg-forest-900 text-white p-2 rounded-full ml-2" />
+      <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-forest-900/70 hover:bg-forest-900 text-white p-2 rounded-full mr-2" />
+    </Carousel>
   )
 }
