@@ -49,7 +49,7 @@ export default function InstructorCarousel() {
       id: 3,
       name: "Fabrizio La Rosa",
       role: "Milano",
-      bio: "Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus.",
+      bio: "Dopo 10 anni di pratica di arti marziali giapponesi ed una parentesi di lancio del disco e del martello, ha cominciato a studiare scherma storica a Milano nel 2016, diventando ufficialmente istruttore nel 2025.",
       imageUrl: "/images/instructors/demo.png",
     },
     {
