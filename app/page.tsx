@@ -13,7 +13,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <Image
-              src="/placeholder.svg?height=60&width=60"
+              src="/images/logo/saam_lombardia_logo.svg"
               alt="Sala D'Arme Achille Marozzo Lombardia Logo"
               width={60}
               height={60}
