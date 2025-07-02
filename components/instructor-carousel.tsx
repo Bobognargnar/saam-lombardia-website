@@ -36,7 +36,7 @@ export default function InstructorCarousel() {
       name: "Domenico Fichera",
       role: "Milano",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.",
-      imageUrl: "/images/instructors/demo.png",
+      imageUrl: "/images/instructors/domenico_fichera.png",
     },
     {
       id: 2,
