@@ -314,12 +314,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <div className="text-center mt-12">
-              <Link href="#" className="btn-outline uppercase tracking-wider">
-                Contattaci per Informazioni
-              </Link>
-            </div>
           </div>
         </section>
 
