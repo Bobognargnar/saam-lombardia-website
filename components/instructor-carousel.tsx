@@ -99,7 +99,7 @@ export default function InstructorCarousel() {
     <Carousel opts={{ loop: true, align: "start", slidesToScroll: 1 }} className="w-full">
       <CarouselContent className="-ml-4">
         {shuffledInstructors.map((instructor) => (
-          <CarouselItem key={instructor.id} className="pl-4 w-full sm:w-1/2 lg:w-1/3">
+          <CarouselItem key={instructor.id} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
             <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 h-full">
               <div className="relative h-80 overflow-hidden group rounded-t-2xl">
                 <Image
