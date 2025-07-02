@@ -4,6 +4,7 @@ import { MapPin, Clock, Mail, Phone } from "lucide-react"
 import LocationMap from "@/components/location-map"
 import ScrollToSection from "@/components/scroll-to-section"
 import InstructorCarousel from "@/components/instructor-carousel"
+import { Logo } from "@/components/logo"
 
 export default function Home() {
   return (
@@ -12,12 +13,9 @@ export default function Home() {
       <header className="bg-forest-900 text-white z-10 relative border-b border-forest-800 sticky top-0">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <Image
-              src="/images/logo/saam_lombardia_logo.svg"
-              alt="Sala D'Arme Achille Marozzo Lombardia Logo"
-              width={60}
-              height={60}
-              className="mr-3"
+            <Logo
+              className="h-[60px] w-[60px] mr-3" // Use h-[60px] w-[60px] for direct SVG sizing
+              aria-label="Sala D'Arme Achille Marozzo Lombardia Logo"
             />
             <div className="text-left">
               <h1 className="text-lg font-semibold uppercase">Sala D&apos;Arme Achille Marozzo</h1>
@@ -102,8 +100,8 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-forest-500">La Nostra Missione</h3>
                 <p className="mb-6 text-gray-300">
-                  L'ASD Sala d'Arme Achille Marozzo Lombardia è dedicata allo studio, alla pratica e alla diffusione delle
-                  arti marziali storiche italiane. Il nostro obiettivo è preservare e tramandare le tecniche di
+                  L'ASD Sala d'Arme Achille Marozzo Lombardia è dedicata allo studio, alla pratica e alla diffusione
+                  delle arti marziali storiche italiane. Il nostro obiettivo è preservare e tramandare le tecniche di
                   combattimento sviluppate dai maestri italiani dal Medioevo al Rinascimento.
                 </p>
                 <p className="mb-6 text-gray-300">
@@ -116,18 +114,24 @@ export default function Home() {
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>
-                      <strong>Corso Base annuale</strong>, introduttivo alla scherma storica: principi fondamentali e maneggio della "spada da lato" attraverso lo studio dei principali autori rinascimentali della scuola bolognese.    
+                      <strong>Corso Base annuale</strong>, introduttivo alla scherma storica: principi fondamentali e
+                      maneggio della "spada da lato" attraverso lo studio dei principali autori rinascimentali della
+                      scuola bolognese.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>
-                    <strong>Corsi Avanzati</strong> annuali: riservati a chi ha già superato il Corso Base, ogni anno selezioniamo una disciplina diversa su cui focalizzarci, per esempio: spada e brocchiero, spada e pugnale, spada a due mani, armi in asta, spada e cappa.
+                      <strong>Corsi Avanzati</strong> annuali: riservati a chi ha già superato il Corso Base, ogni anno
+                      selezioniamo una disciplina diversa su cui focalizzarci, per esempio: spada e brocchiero, spada e
+                      pugnale, spada a due mani, armi in asta, spada e cappa.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
-                    <span>Partecipazione a <strong>tornei</strong> e competizioni nazionali e internazionali</span>
+                    <span>
+                      Partecipazione a <strong>tornei</strong> e competizioni nazionali e internazionali
+                    </span>
                   </li>
                 </ul>
               </div>
