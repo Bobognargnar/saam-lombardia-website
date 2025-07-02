@@ -102,7 +102,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-forest-500">La Nostra Missione</h3>
                 <p className="mb-6 text-gray-300">
-                  La Sala d'Arme Achille Marozzo Lombardia è dedicata allo studio, alla pratica e alla diffusione delle
+                  L'ASD Sala d'Arme Achille Marozzo Lombardia è dedicata allo studio, alla pratica e alla diffusione delle
                   arti marziali storiche italiane. Il nostro obiettivo è preservare e tramandare le tecniche di
                   combattimento sviluppate dai maestri italiani dal Medioevo al Rinascimento.
                 </p>
@@ -116,25 +116,18 @@ export default function Home() {
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>
-                      Corsi regolari di scherma storica con spada a due mani, spada e brocchiero, spada da lato e altre
-                      armi
+                      Corso Base annuale, introduttivo alla scherma storica: principi fondamentali e maneggio della "spada da lato" attraverso lo studio dei principali autori rinascimentali della scuola bolognese.    
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
-                    <span>Seminari e workshop con maestri internazionali</span>
+                    <span>
+                    Corsi Avanzati annuali: riservati a chi ha già superato il Corso Base, ogni anno selezioniamo una disciplina diversa su cui focalizzarci, per esempio: spada e brocchiero, spada e pugnale, spada a due mani, armi in asta, spada e cappa.
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>Partecipazione a tornei e competizioni nazionali e internazionali</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-forest-500 mr-2">•</span>
-                    <span>Rievocazioni storiche e dimostrazioni pubbliche</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-forest-500 mr-2">•</span>
-                    <span>Ricerca e studio dei trattati storici di scherma</span>
                   </li>
                 </ul>
               </div>
