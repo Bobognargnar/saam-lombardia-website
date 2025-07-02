@@ -310,6 +310,37 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* Lecco Malgrate */}
+              <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
+                <div className="h-64 relative">
+                  <LocationMap
+                    latitude={45.8478182}
+                    longitude={9.3749885}
+                    title="Malgrate (LC), via Gaggio 3"
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Lecco, Corso Base e Avanzato</h3>
+                  <div className="space-y-3 text-gray-300">
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Via Gaggio, 3, Malgrate (LC)</span>
+                    </div>
+                    <div className="flex items-start">
+                      <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p>Mercoledì, Venerdì: 20:00 - 22:00</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Sede ancora da confermare per l'anno 2025</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="text-center mb-16">
               <div className="w-20 h-1 bg-forest-500 mx-auto mt-4"></div>
