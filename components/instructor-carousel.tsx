@@ -12,15 +12,32 @@ interface Instructor {
   imageUrl: string
 }
 
+function shuffleArray<T>(array: T[]): T[] {
+  let currentIndex = array.length,
+    randomIndex
+
+  // While there remain elements to shuffle.
+  while (currentIndex !== 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex--
+
+    // And swap it with the current element.
+    ;[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+  }
+
+  return array
+}
+
 export default function InstructorCarousel() {
-  const instructors: Instructor[] = [
+  const initialInstructors: Instructor[] = [
     {
       id: 1,
       name: "Domenico Fichera",
       role: "Milano",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.",
       imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKmTMnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
     },
     {
       id: 2,
@@ -72,9 +89,14 @@ export default function InstructorCarousel() {
     },
   ]
 
+  const [shuffledInstructors, setShuffledInstructors] = useState<Instructor[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
   const [visibleCards, setVisibleCards] = useState(3)
+
+  useEffect(() => {
+    setShuffledInstructors(shuffleArray([...initialInstructors]))
+  }, []) // Empty dependency array ensures this runs only once on mount
 
   useEffect(() => {
     const handleResize = () => {
@@ -92,7 +114,7 @@ export default function InstructorCarousel() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  const totalSlides = Math.ceil(instructors.length / visibleCards)
+  const totalSlides = Math.ceil(shuffledInstructors.length / visibleCards)
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === totalSlides - 1 ? 0 : prevIndex + 1))
@@ -104,7 +126,7 @@ export default function InstructorCarousel() {
 
   const getVisibleInstructors = () => {
     const startIdx = currentIndex * visibleCards
-    return instructors.slice(startIdx, startIdx + visibleCards)
+    return shuffledInstructors.slice(startIdx, startIdx + visibleCards)
   }
 
   return (
