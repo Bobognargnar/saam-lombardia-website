@@ -317,7 +317,7 @@ export default function Home() {
                   <LocationMap
                     latitude={45.8478182}
                     longitude={9.3749885}
-                    title="Malgrate (LC), via Gaggio 3"
+                    title="Indirizzo Cremona???"
                     className="w-full h-full"
                   />
                 </div>
@@ -326,7 +326,7 @@ export default function Home() {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Via Gaggio, 3, Malgrate (LC)</span>
+                      <span>Cremona (CR)</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
