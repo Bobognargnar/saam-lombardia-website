@@ -467,15 +467,15 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-400">Sede Centrale: Via Esempio, 123, 20100 Milano (MI)</span>
+                  <span className="text-gray-400">Sede Legale: Via Antico Rodano 14, Cremona (CR) 26100    </span>
                 </div>
                 <div className="flex items-start">
                   <Mail className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-400">info@marozzoLombardia.it</span>
+                  <span className="text-gray-400">asd-lombardia@achillemarozzo.it</span>
                 </div>
                 <div className="flex items-start">
                   <Phone className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-400">+39 02 1234567</span>
+                  <span className="text-gray-400">+39 3498661112 (Fabrizio) </span>
                 </div>
               </div>
             </div>
