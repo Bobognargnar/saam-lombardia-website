@@ -184,18 +184,6 @@ export default function Home() {
                 vicina a te e vieni a trovarci!
               </p>
               <div className="w-20 h-1 bg-forest-500 mx-auto mt-4"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                La Sala d'Arme Achille Marozzo è presente anche a{" "}
-                <Link
-                  href="https://www.achillemarozzo.it/sedi/desenzano-del-garda"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-forest-500 hover:text-forest-400 underline transition-colors"
-                >
-                  Desenzano del Garda, come Pro Desenzano
-                </Link>
-                .
-              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -323,6 +311,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="text-center mb-16">
+              <div className="w-20 h-1 bg-forest-500 mx-auto mt-4"></div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                La Sala d'Arme Achille Marozzo è presente anche a{" "}
+                <Link
+                  href="https://www.achillemarozzo.it/sedi/desenzano-del-garda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forest-500 hover:text-forest-400 underline transition-colors"
+                >
+                  Desenzano del Garda, come Pro Desenzano
+                </Link>
+                .
+              </p>
+            </div>
 
             <div className="text-center mt-12">
               <Link href="#" className="btn-outline uppercase tracking-wider">
@@ -376,7 +379,7 @@ export default function Home() {
             <div>
               <div className="flex items-center mb-4">
                 <Image
-                  src="/images/logo/saam_lombardia_logo.svg"
+                  src="/images/logo/saam_lombardia_logo.svg" // Changed src to the actual logo
                   alt="Sala D'Arme Achille Marozzo Lombardia Logo"
                   width={50}
                   height={50}
