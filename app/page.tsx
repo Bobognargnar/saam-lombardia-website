@@ -81,11 +81,6 @@ export default function Home() {
               Scopri di Più
             </Link>
           </div>
-          <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
-            <span className="w-2 h-2 rounded-full bg-forest-500"></span>
-            <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
-          </div>
         </section>
 
         {/* About Section */}
@@ -187,6 +182,18 @@ export default function Home() {
                 vicina a te e vieni a trovarci!
               </p>
               <div className="w-20 h-1 bg-forest-500 mx-auto mt-4"></div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                La Sala d'Arme Achille Marozzo è presente anche a{' '}
+                <Link
+                  href="https://www.achillemarozzo.it/sedi/desenzano-del-garda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forest-500 hover:text-forest-400 underline transition-colors"
+                >
+                  Desenzano del Garda, come Pro Desenzano
+                </Link>
+                .
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -351,13 +358,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="#"
-                className="bg-forest-900 hover:bg-forest-800 text-white px-8 py-3 rounded-2xl uppercase font-medium tracking-wider transition-colors"
-              >
-                Prenota una Lezione
-              </Link>
-              <Link
-                href="#"
+                href="mailto:info@marozzoLombardia.it"
                 className="bg-white hover:bg-gray-100 text-forest-600 px-8 py-3 rounded-2xl uppercase font-medium tracking-wider transition-colors"
               >
                 Contattaci

@@ -36,56 +36,49 @@ export default function InstructorCarousel() {
       name: "Domenico Fichera",
       role: "Milano",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.",
-      imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+      imageUrl: "/images/instructores/demo.png",
     },
     {
       id: 2,
       name: "Fabrizio -Fizzi- Magistro",
       role: "Milano",
       bio: "Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor.",
-      imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKmTMnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+      imageUrl: "/images/instructores/demo.png",
     },
     {
       id: 3,
       name: "Fabrizio La Rosa",
       role: "Milano",
       bio: "Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus.",
-      imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKmTMnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+      imageUrl: "/images/instructores/demo.png",
     },
     {
       id: 4,
       name: "Ruven Saraceni",
       role: "Lecco",
       bio: "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.",
-      imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKmTMnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+      imageUrl: "/images/instructores/demo.png",
     },
     {
       id: 5,
       name: "Davide Losa",
       role: "Lecco",
       bio: "Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis.",
-      imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKmTMnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+      imageUrl: "/images/instructores/demo.png",
     },
     {
       id: 6,
       name: "Marco Valla",
       role: "Cremona",
       bio: "Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.",
-      imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKmTMnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+      imageUrl: "/images/instructores/demo.png",
     },
     {
       id: 7,
       name: "Federico Di Marco",
       role: "Milano",
       bio: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-      imageUrl:
-        "https://sjc.microlink.io/y9xFjBum12B8RQPT5H6G63uOAXcaGugxTIk99LiE4YjNjSaDaLSsM7dyNKmTMnUzLNgrVTFLf5AUqoFfwahz8Q.jpeg",
+      imageUrl: "/images/instructores/demo.png",
     },
   ]
 
