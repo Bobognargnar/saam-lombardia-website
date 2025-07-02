@@ -311,7 +311,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Lecco Malgrate */}
+              {/* Cremona  */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
                   <LocationMap
