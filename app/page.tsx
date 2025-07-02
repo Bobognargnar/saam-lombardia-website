@@ -201,7 +201,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Centro</h3>
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano, Corso Base</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -215,7 +215,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Corso Base</span>
+                      <span>Sede ancora da confermare per l'anno 2025</span>
                     </div>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Centro</h3>
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Corso Avanzato 1</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -246,7 +246,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Corso Avanzato</span>
+                      <span>Sede ancora da confermare per l'anno 2025</span>
                     </div>
                   </div>
                 </div>
@@ -263,7 +263,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Centro</h3>
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Corso Avanzato 2</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -277,7 +277,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Corso Avanzato</span>
+                      <span>Sede ancora da confermare per l'anno 2025</span>
                     </div>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Brescia</h3>
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Lecco, Corso Base e Avanzato</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -308,7 +308,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Corso Base e Avanzato</span>
+                      <span>Sede ancora da confermare per l'anno 2025</span>
                     </div>
                   </div>
                 </div>
