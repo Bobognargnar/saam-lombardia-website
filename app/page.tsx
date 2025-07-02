@@ -116,18 +116,18 @@ export default function Home() {
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>
-                      Corso Base annuale, introduttivo alla scherma storica: principi fondamentali e maneggio della "spada da lato" attraverso lo studio dei principali autori rinascimentali della scuola bolognese.    
+                      <strong>Corso Base annuale</strong>, introduttivo alla scherma storica: principi fondamentali e maneggio della "spada da lato" attraverso lo studio dei principali autori rinascimentali della scuola bolognese.    
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>
-                    Corsi Avanzati annuali: riservati a chi ha già superato il Corso Base, ogni anno selezioniamo una disciplina diversa su cui focalizzarci, per esempio: spada e brocchiero, spada e pugnale, spada a due mani, armi in asta, spada e cappa.
+                    <strong>Corsi Avanzati</strong> annuali: riservati a chi ha già superato il Corso Base, ogni anno selezioniamo una disciplina diversa su cui focalizzarci, per esempio: spada e brocchiero, spada e pugnale, spada a due mani, armi in asta, spada e cappa.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
-                    <span>Partecipazione a tornei e competizioni nazionali e internazionali</span>
+                    <span>Partecipazione a <strong>tornei</strong> e competizioni nazionali e internazionali</span>
                   </li>
                 </ul>
               </div>
