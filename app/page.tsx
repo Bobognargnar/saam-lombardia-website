@@ -4,7 +4,6 @@ import { MapPin, Clock, Mail, Phone } from "lucide-react"
 import LocationMap from "@/components/location-map"
 import ScrollToSection from "@/components/scroll-to-section"
 import InstructorCarousel from "@/components/instructor-carousel"
-import { Logo } from "@/components/logo"
 
 export default function Home() {
   return (
@@ -13,9 +12,12 @@ export default function Home() {
       <header className="bg-forest-900 text-white z-10 relative border-b border-forest-800 sticky top-0">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <Logo
-              className="h-[60px] w-[60px] mr-3" // Use h-[60px] w-[60px] for direct SVG sizing
-              aria-label="Sala D'Arme Achille Marozzo Lombardia Logo"
+            <Image
+              src="/images/logo/saam_lombardia_logo.svg"
+              alt="Sala D'Arme Achille Marozzo Lombardia Logo"
+              width={60}
+              height={60}
+              className="mr-3"
             />
             <div className="text-left">
               <h1 className="text-lg font-semibold uppercase">Sala D&apos;Arme Achille Marozzo</h1>
@@ -74,7 +76,7 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">ARTI MARZIALI STORICHE ITALIANE</h2>
-            <p className="text-xl md:text-2xl tracking-wide mb-8">IMPARA LE BASI DELLA SCHERMA STORICA</p>
+            <p className="text-xl md:text-2xl tracking-wide mb-8">IMPARA LE BASSI DELLA SCHERMA STORICA</p>
             <Link href="#about" className="btn-primary uppercase tracking-wider">
               Scopri di Più
             </Link>
