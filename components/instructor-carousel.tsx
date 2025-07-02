@@ -80,6 +80,13 @@ export default function InstructorCarousel() {
       bio: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
       imageUrl: "/images/instructors/demo.png",
     },
+    {
+      id: 8,
+      name: "Davide Missaglia",
+      role: "Varese",
+      bio: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
+      imageUrl: "/images/instructors/demo.png",
+    }
   ]
 
   const [shuffledInstructors, setShuffledInstructors] = useState<Instructor[]>([])
