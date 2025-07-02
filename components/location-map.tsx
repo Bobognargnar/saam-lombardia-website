@@ -3,47 +3,83 @@
 import { useEffect, useRef } from "react"
 
 interface LocationMapProps {
-  address: string
+  latitude: number
+  longitude: number
+  title?: string
   className?: string
 }
 
-export default function LocationMap({ address, className = "" }: LocationMapProps) {
-  const iframeRef = useRef<HTMLIFrameElement>(null)
+export default function LocationMap({ latitude, longitude, title = "", className = "" }: LocationMapProps) {
+  const mapRef = useRef<HTMLDivElement>(null)
+  const mapInstanceRef = useRef<any>(null)
 
   useEffect(() => {
-    if (iframeRef.current) {
-      // Encode the address for the Google Maps URL
-      const encodedAddress = encodeURIComponent(address)
+    // Load Leaflet CSS and JS dynamically
+    const loadLeaflet = async () => {
+      // Add Leaflet CSS
+      if (!document.querySelector('link[href*="leaflet"]')) {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'
+        link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY='
+        link.crossOrigin = ''
+        document.head.appendChild(link)
+      }
 
-      // Set the src attribute with the Google Maps embed URL
-      iframeRef.current.src = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodedAddress}&zoom=15`
+      // Add Leaflet JS
+      if (!(window as any).L) {
+        const script = document.createElement('script')
+        script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
+        script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo='
+        script.crossOrigin = ''
+        document.head.appendChild(script)
 
-      // Note: In a real application, you would need to replace YOUR_API_KEY with an actual Google Maps API key
-      // For this demo, we'll use a placeholder that shows what the iframe would look like
+        await new Promise((resolve) => {
+          script.onload = resolve
+        })
+      }
     }
-  }, [address])
+
+    const initMap = async () => {
+      await loadLeaflet()
+
+      if (mapRef.current && !mapInstanceRef.current) {
+        const L = (window as any).L
+
+        // Use provided coordinates
+        const coords = [latitude, longitude]
+
+        // Create map instance
+        mapInstanceRef.current = L.map(mapRef.current).setView(coords, 15)
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 19,
+        }).addTo(mapInstanceRef.current)
+
+        // Add a marker
+        const marker = L.marker(coords).addTo(mapInstanceRef.current)
+        if (title) {
+          marker.bindPopup(`<b>${title}</b>`).openPopup()
+        }
+      }
+    }
+
+    initMap()
+
+    // Cleanup function
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove()
+        mapInstanceRef.current = null
+      }
+    }
+  }, [latitude, longitude, title])
 
   return (
     <div className={`w-full h-full ${className}`}>
-      {/* For demonstration purposes, we'll show a placeholder */}
-      <div className="w-full h-full bg-forest-900 flex items-center justify-center text-center p-4">
-        <div>
-          <p className="text-forest-500 font-semibold mb-2">Google Maps</p>
-          <p className="text-sm text-gray-300">{address}</p>
-          <p className="text-xs text-gray-400 mt-2">
-            (In a real application, this would display an interactive Google Map)
-          </p>
-        </div>
-      </div>
-
-      {/* This iframe would be used in a real application with a valid API key */}
-      <iframe
-        ref={iframeRef}
-        className="hidden w-full h-full border-0"
-        loading="lazy"
-        allowFullScreen
-        title={`Map of ${address}`}
-      ></iframe>
+      <div ref={mapRef} className="w-full h-full rounded-lg" />
     </div>
   )
 }

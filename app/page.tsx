@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Clock, Mail, Phone } from "lucide-react"
+import { MapPin, Clock, Mail, Phone, Info } from "lucide-react"
 import LocationMap from "@/components/location-map"
 import ScrollToSection from "@/components/scroll-to-section"
 import InstructorCarousel from "@/components/instructor-carousel"
@@ -75,8 +75,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-forest-900/90 to-forest-800/80"></div>
           </div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">ARTI MARZIALI STORICHE ITALIANE</h2>
-            <p className="text-xl md:text-2xl tracking-wide mb-8">IMPARA LE BASSI DELLA SCHERMA STORICA</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">SALA D'ARME ACHILLE MAROZZO LOMBARDIA</h2>
+            <p className="text-xl md:text-2xl tracking-wide mb-8">MILANO, LECCO, CREMONA, VARESE</p>
             <Link href="#about" className="btn-primary uppercase tracking-wider">
               Scopri di Più
             </Link>
@@ -193,25 +193,29 @@ export default function Home() {
               {/* Milano Location */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
-                  <LocationMap address="Milano, Lombardia, Italia" className="w-full h-full" />
+                  <LocationMap 
+                    latitude={45.489244} 
+                    longitude={9.239741} 
+                    title="Milano, via Maniago 30" 
+                    className="w-full h-full" 
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Centro</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Via Esempio, 123, 20100 Milano (MI)</span>
+                      <span>Via Maniago, 30, Milano</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Lunedì e Giovedì: 20:00 - 22:00</p>
-                        <p>Sabato: 15:00 - 18:00</p>
+                        <p>Martedì e Giovedì: 20:00 - 22:00</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Phone className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>+39 02 1234567</span>
+                      <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Corso Base</span>
                     </div>
                   </div>
                 </div>
@@ -220,7 +224,12 @@ export default function Home() {
               {/* Bergamo Location */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
-                  <LocationMap address="Bergamo, Lombardia, Italia" className="w-full h-full" />
+                  <LocationMap 
+                    latitude={45.6983} 
+                    longitude={9.6773} 
+                    title="Bergamo" 
+                    className="w-full h-full" 
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-forest-500">Bergamo</h3>
@@ -237,7 +246,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Phone className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <span>+39 035 7654321</span>
                     </div>
                   </div>
@@ -264,7 +273,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Phone className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <span>+39 030 9876543</span>
                     </div>
                   </div>
