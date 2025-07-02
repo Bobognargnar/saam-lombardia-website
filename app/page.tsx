@@ -190,7 +190,7 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Milano Location */}
+              {/* Corso Base Milano */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
                   <LocationMap 
@@ -205,7 +205,7 @@ export default function Home() {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Via Maniago, 30, Milano</span>
+                      <span>Presso i.c. Buzzati - Via Maniago, 30, Milano</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -221,60 +221,94 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bergamo Location */}
+              {/* Milano via Feltre */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
                   <LocationMap 
-                    latitude={45.6983} 
-                    longitude={9.6773} 
-                    title="Bergamo" 
+                    latitude={45.490073} 
+                    longitude={9.244558} 
+                    title="Milano, via Feltre 68/1" 
                     className="w-full h-full" 
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Bergamo</h3>
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Centro</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Via Esempio, 45, 24100 Bergamo (BG)</span>
+                      <span>Presso i.c. Buzzati - Via Feltre, 68/1, Milano</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Martedì e Venerdì: 19:30 - 21:30</p>
-                        <p>Domenica: 10:00 - 12:30</p>
+                        <p>Martedì e Mercoledì: 20:00 - 22:00</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>+39 035 7654321</span>
+                      <span>Corso Avanzato</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Brescia Location */}
+              {/* Milano via Colletta */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
-                  <LocationMap address="Brescia, Lombardia, Italia" className="w-full h-full" />
+                  <LocationMap 
+                    latitude={45.448815} 
+                    longitude={9.211822} 
+                    title="Milano, via Pietro Colletta 48" 
+                    className="w-full h-full" 
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Centro</h3>
+                  <div className="space-y-3 text-gray-300">
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Presso i.c. Colletta - Via Pietro Colletta, 48, Milano</span>
+                    </div>
+                    <div className="flex items-start">
+                      <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p>Lunedì: 21:00 - 23:00</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Corso Avanzato</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lecco Malgrate */}
+              <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
+                <div className="h-64 relative">
+                  <LocationMap 
+                    latitude={45.8478182} 
+                    longitude={9.3749885} 
+                    title="Malgrate (LC), via Gaggio 3" 
+                    className="w-full h-full" 
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-forest-500">Brescia</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Via Esempio, 78, 25100 Brescia (BS)</span>
+                      <span>Via Gaggio, 3, Malgrate (LC)</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Mercoledì: 20:00 - 22:00</p>
-                        <p>Sabato: 14:30 - 17:00</p>
+                        <p>Mercoledì, Venerdì: 20:00 - 22:00</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>+39 030 9876543</span>
+                      <span>Corso Base e Avanzato</span>
                     </div>
                   </div>
                 </div>
