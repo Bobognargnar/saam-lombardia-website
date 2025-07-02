@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 24, 35, 15;
+  --background-end-rgb: 39, 57, 28;
+}
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* Custom colors for the Lombardia chapter */
+.text-forest-500 {
+  color: #1f7d53;
+}
+
+.text-forest-600 {
+  color: #255f38;
+}
+
+.bg-forest-500,
+.bg-forest-600,
+.bg-forest-700 {
+  background-color: #1f7d53;
+}
+
+.bg-forest-800 {
+  background-color: #27391c;
+}
+
+.bg-forest-900 {
+  background-color: #18230f;
+}
+
+.hover\:bg-forest-500:hover {
+  background-color: #1f7d53;
+}
+
+.hover\:bg-forest-600:hover {
+  background-color: #255f38;
+}
+
+.hover\:bg-forest-700:hover {
+  background-color: #27391c;
+}
+
+.border-forest-500,
+.border-forest-600 {
+  border-color: #1f7d53;
+}
+
+.hover\:border-forest-600:hover {
+  border-color: #255f38;
+}
+
+.hover\:text-forest-500:hover {
+  color: #1f7d53;
+}
+
+/* Location card hover animation */
+@keyframes subtle-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(31, 125, 83, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(31, 125, 83, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(31, 125, 83, 0);
+  }
+}
+
+.hover\:scale-105:hover {
+  animation: subtle-pulse 2s infinite;
+}
+
+/* Custom button styles */
+.btn {
+  @apply rounded-2xl transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-forest-500 hover:bg-forest-600 text-white px-6 py-3 rounded-2xl font-medium;
+}
+
+.btn-outline {
+  @apply border-2 border-forest-500 text-forest-500 hover:bg-forest-500 hover:text-black px-6 py-3 rounded-2xl font-medium;
+}
+
+.btn-secondary {
+  @apply bg-forest-900 hover:bg-forest-800 text-white px-6 py-3 rounded-2xl font-medium;
+}
