@@ -75,7 +75,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-forest-900/90 to-forest-800/80"></div>
           </div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">SALA D'ARME ACHILLE MAROZZO LOMBARDIA</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">
+              SALA D'ARME ACHILLE MAROZZO LOMBARDIA
+            </h2>
             <p className="text-xl md:text-2xl tracking-wide mb-8">MILANO, LECCO, CREMONA, VARESE</p>
             <Link href="#about" className="btn-primary uppercase tracking-wider">
               Scopri di Più
@@ -152,7 +154,7 @@ export default function Home() {
                 <div className="aspect-square relative rounded-xl overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=300&width=300"
-                    alt="Studio dei trattati storici"
+                    alt="Study of historical treatises"
                     fill
                     className="object-cover"
                   />
@@ -160,7 +162,7 @@ export default function Home() {
                 <div className="aspect-square relative rounded-xl overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=300&width=300"
-                    alt="Dimostrazione pubblica"
+                    alt="Public demonstration"
                     fill
                     className="object-cover"
                   />
@@ -183,7 +185,7 @@ export default function Home() {
               </p>
               <div className="w-20 h-1 bg-forest-500 mx-auto mt-4"></div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                La Sala d'Arme Achille Marozzo è presente anche a{' '}
+                La Sala d'Arme Achille Marozzo è presente anche a{" "}
                 <Link
                   href="https://www.achillemarozzo.it/sedi/desenzano-del-garda"
                   target="_blank"
@@ -200,11 +202,11 @@ export default function Home() {
               {/* Corso Base Milano */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
-                  <LocationMap 
-                    latitude={45.489244} 
-                    longitude={9.239741} 
-                    title="Milano, via Maniago 30" 
-                    className="w-full h-full" 
+                  <LocationMap
+                    latitude={45.489244}
+                    longitude={9.239741}
+                    title="Milano, via Maniago 30"
+                    className="w-full h-full"
                   />
                 </div>
                 <div className="p-6">
@@ -231,11 +233,11 @@ export default function Home() {
               {/* Milano via Feltre */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
-                  <LocationMap 
-                    latitude={45.490073} 
-                    longitude={9.244558} 
-                    title="Milano, via Feltre 68/1" 
-                    className="w-full h-full" 
+                  <LocationMap
+                    latitude={45.490073}
+                    longitude={9.244558}
+                    title="Milano, via Feltre 68/1"
+                    className="w-full h-full"
                   />
                 </div>
                 <div className="p-6">
@@ -262,11 +264,11 @@ export default function Home() {
               {/* Milano via Colletta */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
-                  <LocationMap 
-                    latitude={45.448815} 
-                    longitude={9.211822} 
-                    title="Milano, via Pietro Colletta 48" 
-                    className="w-full h-full" 
+                  <LocationMap
+                    latitude={45.448815}
+                    longitude={9.211822}
+                    title="Milano, via Pietro Colletta 48"
+                    className="w-full h-full"
                   />
                 </div>
                 <div className="p-6">
@@ -293,11 +295,11 @@ export default function Home() {
               {/* Lecco Malgrate */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
-                  <LocationMap 
-                    latitude={45.8478182} 
-                    longitude={9.3749885} 
-                    title="Malgrate (LC), via Gaggio 3" 
-                    className="w-full h-full" 
+                  <LocationMap
+                    latitude={45.8478182}
+                    longitude={9.3749885}
+                    title="Malgrate (LC), via Gaggio 3"
+                    className="w-full h-full"
                   />
                 </div>
                 <div className="p-6">
@@ -374,7 +376,7 @@ export default function Home() {
             <div>
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src="/images/logo/saam_lombardia_logo.svg" // Changed src to the actual logo
                   alt="Sala D'Arme Achille Marozzo Lombardia Logo"
                   width={50}
                   height={50}
@@ -390,7 +392,10 @@ export default function Home() {
                 italiane.
               </p>
               <div className="flex space-x-4">
-                <Link href="https://www.instagram.com/saam.lombardia/" className="text-gray-400 hover:text-forest-500 transition-colors">
+                <Link
+                  href="https://www.instagram.com/saam.lombardia/"
+                  className="text-gray-400 hover:text-forest-500 transition-colors"
+                >
                   <span className="sr-only">Instagram</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -400,7 +405,10 @@ export default function Home() {
                     />
                   </svg>
                 </Link>
-                <Link href="https://www.youtube.com/@AchilleMarozzoVideo" className="text-gray-400 hover:text-forest-500 transition-colors">
+                <Link
+                  href="https://www.youtube.com/@AchilleMarozzoVideo"
+                  className="text-gray-400 hover:text-forest-500 transition-colors"
+                >
                   <span className="sr-only">YouTube</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -457,7 +465,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-400">Sede Legale: Via Antico Rodano 14, Cremona (CR) 26100    </span>
+                  <span className="text-gray-400">Sede Legale: Via Antico Rodano 14, Cremona (CR) 26100 </span>
                 </div>
                 <div className="flex items-start">
                   <Mail className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
