@@ -85,7 +85,7 @@ export default function InstructorCarousel() {
       name: "Davide Missaglia",
       role: "Varese",
       bio: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-      imageUrl: "/images/instructors/devide.png",
+      imageUrl: "/images/instructors/davide.png",
     }
   ]
 
