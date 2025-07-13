@@ -43,7 +43,7 @@ export default function InstructorCarousel() {
       name: "Fabrizio -Fizzi- Magistro",
       role: "Milano",
       bio: "Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor.",
-      imageUrl: "/images/instructors/demo.png",
+      imageUrl: "/images/instructors/fizzi_crop.png",
     },
     {
       id: 3,
@@ -85,7 +85,7 @@ export default function InstructorCarousel() {
       name: "Davide Missaglia",
       role: "Varese",
       bio: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-      imageUrl: "/images/instructors/demo.png",
+      imageUrl: "/images/instructors/devide.png",
     }
   ]
 
