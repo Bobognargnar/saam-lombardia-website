@@ -1,11 +1,35 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Clock, Mail, Phone, Info } from "lucide-react"
+import { MapPin, Clock, Mail, Phone, Info, X } from "lucide-react"
 import LocationMap from "@/components/location-map"
 import ScrollToSection from "@/components/scroll-to-section"
 import InstructorCarousel from "@/components/instructor-carousel"
+import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog"
+import { useState } from "react"
 
 export default function Home() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [currentImage, setCurrentImage] = useState("")
+
+  const openDialog = (imageSrc: string) => {
+    setCurrentImage(imageSrc)
+    setIsDialogOpen(true)
+  }
+
+  const closeDialog = () => {
+    setIsDialogOpen(false)
+    setCurrentImage("")
+  }
+
+  const aboutImages = [
+    "/images/locations/1.jpg",
+    "/images/locations/2.jpg",
+    "/images/locations/3.jpg",
+    "/images/locations/4.jpg",
+  ]
+
   return (
     <div className="min-h-screen flex flex-col bg-forest-900 text-white">
       <ScrollToSection />
@@ -135,38 +159,39 @@ export default function Home() {
                 </ul>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Allenamento di scherma storica"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="aspect-square relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Torneo di scherma storica"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="aspect-square relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Study of historical treatises"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="aspect-square relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Public demonstration"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                {aboutImages.map((imageSrc, index) => (
+                  <Dialog key={index} open={isDialogOpen && currentImage === imageSrc} onOpenChange={setIsDialogOpen}>
+                    <DialogTrigger asChild>
+                      <div
+                        className="aspect-square relative rounded-xl overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => openDialog(imageSrc)}
+                      >
+                        <Image
+                          src={imageSrc || "/placeholder.svg"}
+                          alt={`Allenamento di scherma storica ${index + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-full h-full p-0 border-none bg-transparent flex items-center justify-center">
+                      <div className="relative w-full h-full flex items-center justify-center">
+                        <Image
+                          src={currentImage || "/placeholder.svg"}
+                          alt="Full screen image"
+                          fill
+                          className="object-contain"
+                        />
+                        <DialogClose asChild>
+                          <button className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-50">
+                            <X className="h-8 w-8" />
+                            <span className="sr-only">Close</span>
+                          </button>
+                        </DialogClose>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                ))}
               </div>
             </div>
           </div>
