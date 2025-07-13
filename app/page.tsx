@@ -24,9 +24,9 @@ export default function Home() {
   }
 
   const aboutImages = [
-    "/images/locations/1.jpg",
+    "/images/locations/team_2025.jpg",
     "/images/locations/2.jpg",
-    "/images/locations/3.jpg",
+    "/images/locations/5.jpg",
     "/images/locations/4.jpg",
   ]
 
