@@ -36,7 +36,7 @@ export default function InstructorCarousel() {
       name: "Domenico Fichera",
       role: "Milano",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.",
-      imageUrl: "/images/instructors/domenico_fichera.png",
+      imageUrl: "/images/instructors/dome_nb.png",
     },
     {
       id: 2,
@@ -71,21 +71,21 @@ export default function InstructorCarousel() {
       name: "Marco Valla",
       role: "Cremona",
       bio: "Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.",
-      imageUrl: "/images/instructors/demo.png",
+      imageUrl: "/images/instructors/marco_nb.png",
     },
     {
       id: 7,
       name: "Federico Di Marco",
       role: "Milano",
       bio: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-      imageUrl: "/images/instructors/demo.png",
+      imageUrl: "/images/instructors/allen_nb.png",
     },
     {
       id: 8,
       name: "Davide Missaglia",
       role: "Varese",
       bio: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-      imageUrl: "/images/instructors/davide.png",
+      imageUrl: "/images/instructors/davide_nb.png",
     }
   ]
 

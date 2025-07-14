@@ -100,7 +100,10 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">
-              SALA D'ARME ACHILLE MAROZZO LOMBARDIA
+              CORSI DI SCHERMA
+            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">
+              ANTICA E MEDIEVALE
             </h2>
             <p className="text-xl md:text-2xl tracking-wide mb-8">MILANO, LECCO, CREMONA, VARESE</p>
             <Link href="#about" className="btn-primary uppercase tracking-wider">
@@ -342,12 +345,12 @@ export default function Home() {
                   <LocationMap
                     latitude={45.8478182}
                     longitude={9.3749885}
-                    title="Indirizzo Cremona???"
+                    title="Indirizzo da confermare"
                     className="w-full h-full"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Lecco, Corso Base e Avanzato</h3>
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Cremona, Corso Base e Avanzato</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -393,8 +396,7 @@ export default function Home() {
                 I NOSTRI <span className="text-forest-500">ISTRUTTORI</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scopri i nostri maestri d'arme e istruttori, esperti nelle diverse discipline della scherma storica
-                italiana.
+                Scopri i nostri istruttori e tecnici con vasta esperienza nelle arti marziali storiche italiane.
               </p>
               <div className="w-20 h-1 bg-forest-500 mx-auto mt-4"></div>
             </div>
@@ -441,7 +443,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-400 mb-4">
-                Associazione culturale dedicata allo studio, alla pratica e alla diffusione delle arti marziali storiche
+                Associazione sportiva dilettantistica dedicata allo studio, alla pratica e alla diffusione delle arti marziali storiche
                 italiane.
               </p>
               <div className="flex space-x-4">
