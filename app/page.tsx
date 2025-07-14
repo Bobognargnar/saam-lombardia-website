@@ -6,6 +6,7 @@ import { MapPin, Clock, Mail, Phone, Info, X } from "lucide-react"
 import LocationMap from "@/components/location-map"
 import ScrollToSection from "@/components/scroll-to-section"
 import InstructorCarousel from "@/components/instructor-carousel"
+import VantaBackground from "@/components/vanta-background"
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog"
 import { useState } from "react"
 
@@ -93,20 +94,21 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[70vh] min-h-[500px]">
-          <div className="absolute inset-0 bg-forest-900">
-            {/* Dark background with gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-forest-900/90 to-forest-800/80"></div>
-          </div>
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">
-              CORSI DI SCHERMA
-            </h2>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider">
-              ANTICA E MEDIEVALE
-            </h2>
-            <p className="text-xl md:text-2xl tracking-wide mb-8">MILANO, LECCO, CREMONA, VARESE</p>
-            <Link href="#about" className="btn-primary uppercase tracking-wider">
+        <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+          {/* Vanta.js animated background */}
+          <VantaBackground />
+
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-forest-900/40 z-10"></div>
+
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider drop-shadow-lg">CORSI DI SCHERMA</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider drop-shadow-lg">ANTICA E MEDIEVALE</h2>
+            <p className="text-xl md:text-2xl tracking-wide mb-8 drop-shadow-md">MILANO, LECCO, CREMONA, VARESE</p>
+            <Link
+              href="#about"
+              className="btn-primary uppercase tracking-wider shadow-lg hover:shadow-xl transition-shadow"
+            >
               Scopri di Più
             </Link>
           </div>
@@ -431,7 +433,7 @@ export default function Home() {
             <div>
               <div className="flex items-center mb-4">
                 <Image
-                  src="/images/logo/saam_lombardia_logo.svg" // Changed src to the actual logo
+                  src="/images/logo/saam_lombardia_logo.svg"
                   alt="Sala D'Arme Achille Marozzo Lombardia Logo"
                   width={50}
                   height={50}
@@ -443,8 +445,8 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-400 mb-4">
-                Associazione sportiva dilettantistica dedicata allo studio, alla pratica e alla diffusione delle arti marziali storiche
-                italiane.
+                Associazione sportiva dilettantistica dedicata allo studio, alla pratica e alla diffusione delle arti
+                marziali storiche italiane.
               </p>
               <div className="flex space-x-4">
                 <Link
