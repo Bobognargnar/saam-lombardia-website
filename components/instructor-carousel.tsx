@@ -35,7 +35,7 @@ export default function InstructorCarousel() {
       id: 1,
       name: "Domenico Fichera",
       role: "Milano",
-      bio: "Domenico Fichera è fondatore e istruttore della Sala d'Arme Achille Marozzo Lombardia, della quale coordina ad oggi la parte tecnica. Opera principalmente sulla sede di Milano, dove tiene corsi dal 2012. Come agonista, ha conquistato numerosi podi e ottime posizioni nelle classifiche nazionali ed internazionali.",
+      bio: "Domenico Fichera è fondatore e istruttore della Sala d'Arme Achille Marozzo Lombardia, della quale coordina ad oggi la parte tecnica. Opera principalmente sulla sede di Milano, dove tiene corsi dal 2012. Come agonista, ha conquistato numerosi podi e ottime posizioni nelle classifiche nazionali ed internazionali.",
       imageUrl: "/images/instructors/dome_nb.png",
     },
     {
@@ -49,7 +49,7 @@ export default function InstructorCarousel() {
       id: 3,
       name: "Fabrizio La Rosa",
       role: "Milano",
-      bio: "Fabrizio La Rosa ha cominciato a studiare scherma storica a Milano nel 2016, diventando presidente della Sala d'Arme Achille Marozzo Lombardia nel 2019 e istruttore nel 2025. Conta inoltre all'attivo 10 anni di pratica di arti marziali giapponesi ed una parentesi di lancio del disco e delmartello.",
+      bio: "Fabrizio La Rosa ha cominciato a studiare scherma storica a Milano nel 2016, diventando presidente della Sala d'Arme Achille Marozzo Lombardia nel 2019 e istruttore nel 2025.",
       imageUrl: "/images/instructors/fabri_nb.png",
     },
     {
@@ -70,7 +70,7 @@ export default function InstructorCarousel() {
       id: 6,
       name: "Marco Valla",
       role: "Cremona",
-      bio: "Istruttore per la sede di Cremona dal 2019.",
+      bio: "Vicepresidente della Saam Lombardia. Istruttore di primo livello dal 2019, tiene il corso base presso la palestra di Cremona. Appassionato di storia, arti marziali, oplologia e duello",
       imageUrl: "/images/instructors/marco_nb.png",
     },
     {
