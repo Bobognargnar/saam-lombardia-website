@@ -19,6 +19,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
   const vantaEffect = useRef<any>(null)
   const [threeLoaded, setThreeLoaded] = useState(false)
   const [vantaLoaded, setVantaLoaded] = useState(false)
+  const [wavesLoaded, setWavesLoaded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [webGLSupported, setWebGLSupported] = useState(true)
 
@@ -65,6 +66,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
     console.log("VantaBackground useEffect triggered", {
       threeLoaded,
       vantaLoaded,
+      wavesLoaded,
       isMobile,
       webGLSupported,
       vantaRefCurrent: vantaRef.current,
@@ -76,48 +78,67 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
       return
     }
 
-    // Only attempt to initialize Vanta.js if both scripts are loaded and the ref is available
-    if (vantaRef.current && threeLoaded && vantaLoaded && window.VANTA && window.THREE) {
+    // Only attempt to initialize Vanta.js if all scripts are loaded and the ref is available
+    if (
+      vantaRef.current &&
+      threeLoaded &&
+      vantaLoaded &&
+      wavesLoaded &&
+      window.VANTA &&
+      window.THREE &&
+      window.VANTA.WAVES
+    ) {
       console.log("Initializing Vanta.js WAVES effect...")
 
-      // Destroy existing effect if it exists to prevent multiple initializations
-      if (vantaEffect.current) {
-        vantaEffect.current.destroy()
-      }
+      // Add a small delay to ensure Three.js is fully initialized
+      setTimeout(() => {
+        // Destroy existing effect if it exists to prevent multiple initializations
+        if (vantaEffect.current) {
+          vantaEffect.current.destroy()
+        }
 
-      try {
-        // Back to original WAVES effect
-        vantaEffect.current = window.VANTA.WAVES({
-          el: vantaRef.current,
-          mouseControls: false,
-          touchControls: false,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0xa180b, // forest-500 color
-          shininess: 30.0,
-          waveHeight: 10.5,
-          waveSpeed: 1.05,
-          zoom: 1.5,
-        })
-        console.log("Vanta.js WAVES effect initialized successfully")
-      } catch (error) {
-        console.error("Failed to initialize Vanta.js effect:", error)
-      }
+        try {
+          // Back to original WAVES effect
+          vantaEffect.current = window.VANTA.WAVES({
+            el: vantaRef.current,
+            mouseControls: false,
+            touchControls: false,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0xa180b, // forest-500 color
+            shininess: 30.0,
+            waveHeight: 10.5,
+            waveSpeed: 1.05,
+            zoom: 1.5,
+          })
+          console.log("Vanta.js WAVES effect initialized successfully")
+        } catch (error) {
+          console.error("Failed to initialize Vanta.js effect:", error)
+        }
+      }, 100)
     } else {
       console.log(
         "Conditions not met for Vanta.js initialization. Three Loaded:",
         threeLoaded,
         "Vanta Loaded:",
         vantaLoaded,
+        "Waves Loaded:",
+        wavesLoaded,
         "Mobile:",
         isMobile,
         "WebGL:",
         webGLSupported,
         "Vanta Ref:",
         vantaRef.current,
+        "VANTA available:",
+        typeof window !== "undefined" && window.VANTA,
+        "THREE available:",
+        typeof window !== "undefined" && window.THREE,
+        "WAVES available:",
+        typeof window !== "undefined" && window.VANTA && window.VANTA.WAVES,
       )
     }
 
@@ -130,7 +151,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
         console.log("Vanta.js effect destroyed.")
       }
     }
-  }, [threeLoaded, vantaLoaded, isMobile, webGLSupported])
+  }, [threeLoaded, vantaLoaded, wavesLoaded, isMobile, webGLSupported])
 
   // CSS gradient fallback for mobile or when WebGL is not supported
   const fallbackStyle =
@@ -155,7 +176,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
       {/* Only load scripts if not on mobile and WebGL is supported */}
       {!isMobile && webGLSupported && (
         <>
-          {/* Load Three.js script */}
+          {/* Load Three.js script first */}
           <Script
             src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
             strategy="afterInteractive"
@@ -165,13 +186,23 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
             }}
             onError={(e) => console.error("Failed to load Three.js:", e)}
           />
-          {/* Load Vanta.js WAVES effect script */}
+          {/* Load main Vanta.js library second */}
+          <Script
+            src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.min.js"
+            strategy="afterInteractive"
+            onLoad={() => {
+              console.log("Vanta.js core loaded successfully!")
+              setVantaLoaded(true)
+            }}
+            onError={(e) => console.error("Failed to load Vanta.js core:", e)}
+          />
+          {/* Load Vanta.js WAVES effect last */}
           <Script
             src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"
             strategy="afterInteractive"
             onLoad={() => {
               console.log("Vanta.js WAVES loaded successfully!")
-              setVantaLoaded(true)
+              setWavesLoaded(true)
             }}
             onError={(e) => console.error("Failed to load Vanta.js WAVES:", e)}
           />
