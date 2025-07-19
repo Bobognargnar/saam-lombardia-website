@@ -9,6 +9,7 @@ import InstructorCarousel from "@/components/instructor-carousel"
 import VantaBackground from "@/components/vanta-background"
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog"
 import { useState } from "react"
+import { Analytics } from '@vercel/analytics/next';
 
 export default function Home() {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-forest-900 text-white">
+      <Analytics />
       <ScrollToSection />
       <header className="bg-forest-900 text-white z-10 relative border-b border-forest-800 sticky top-0">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
