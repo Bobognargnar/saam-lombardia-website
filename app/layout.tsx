@@ -3,8 +3,9 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "SAAM Lombardia - Scuola Arti Marziali",
-  description: "Scuola di Arti Marziali SAAM Lombardia - Corsi di arti marziali per tutte le età",
+  title: "Sala d'Arme Achille Marozzo Lombardia",
+  description:
+    "Associazione sportiva dilettantistica dedicata allo studio, alla pratica e alla diffusione delle arti marziali storiche italiane.",
   verification: {
     google: "8I6jF-si9ixcT55N5Krdk150qSORCTXUW0rwxTS270c",
   },
