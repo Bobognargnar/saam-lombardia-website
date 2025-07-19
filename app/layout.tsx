@@ -8,7 +8,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Sala D'Arme Achille Marozzo Lombardia - Arti Marziali Storiche Italiane",
   description: "Impara le basi della scherma storica in Lombardia - Uno sport di onore e amicizia",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  verification: {
+    google: '8I6jF-si9ixcT55N5Krdk150qSORCTXUW0rwxTS270c',
+  },
 }
 
 export default function RootLayout({
