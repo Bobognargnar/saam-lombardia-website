@@ -54,7 +54,7 @@ export default function InstructorCarousel() {
       id: 2,
       name: "Fabrizio -Fizzi- Magistro",
       role: "Milano",
-      bio: "",
+      bio: "Ha praticato scherma sportiva fin da bambino, fino a quando ha scoperto la scherma storica che studia e pratica da ormai dieci anni. Nonostante gli ottimi risultati ottenuti nei tornei e nelle competizioni, la sua vera passione è lo studio dei trattati e dei documenti storici, e l'insegnamento al quale si dedica da diversi anni.",
       imageUrl: "/images/instructors/fizzi_crop.png",
     },
     {
