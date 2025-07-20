@@ -67,7 +67,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
           }
 
           const threeScript = document.createElement("script")
-          threeScript.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+          threeScript.src = "/js/three.min.js"
           threeScript.async = true
           threeScript.onload = () => {
             console.log("Three.js loaded successfully!")
@@ -84,33 +84,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
         // Wait a bit for Three.js to fully initialize
         await new Promise((resolve) => setTimeout(resolve, 200))
 
-        // Load Vanta.js core
-        await new Promise<void>((resolve, reject) => {
-          if (window.VANTA) {
-            console.log("Vanta.js already loaded")
-            resolve()
-            return
-          }
-
-          const vantaScript = document.createElement("script")
-          vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.min.js"
-          vantaScript.async = true
-          vantaScript.onload = () => {
-            console.log("Vanta.js core loaded successfully!")
-            console.log("VANTA available:", !!window.VANTA)
-            resolve()
-          }
-          vantaScript.onerror = () => {
-            console.error("Failed to load Vanta.js core")
-            reject(new Error("Failed to load Vanta.js core"))
-          }
-          document.head.appendChild(vantaScript)
-        })
-
-        // Wait a bit for Vanta.js to fully initialize
-        await new Promise((resolve) => setTimeout(resolve, 200))
-
-        // Load Vanta.js WAVES effect
+        // Load Vanta.js WAVES effect (which includes the core)
         await new Promise<void>((resolve, reject) => {
           if (window.VANTA && window.VANTA.WAVES) {
             console.log("Vanta.js WAVES already loaded")
@@ -119,7 +93,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
           }
 
           const wavesScript = document.createElement("script")
-          wavesScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"
+          wavesScript.src = "/js/vanta.waves.min.js"
           wavesScript.async = true
           wavesScript.onload = () => {
             console.log("Vanta.js WAVES loaded successfully!")
@@ -137,6 +111,9 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
         setScriptsLoaded(true)
       } catch (error) {
         console.error("Error loading scripts:", error)
+        // If all attempts fail, we'll use the CSS fallback
+        console.log("Falling back to CSS gradient background")
+        setScriptsLoaded(false)
       }
     }
 
@@ -195,9 +172,9 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
     }
   }, [scriptsLoaded, isMobile, webGLSupported])
 
-  // CSS gradient fallback for mobile or when WebGL is not supported
+  // CSS gradient fallback for mobile, when WebGL is not supported, or when scripts fail to load
   const fallbackStyle =
-    isMobile || !webGLSupported
+    isMobile || !webGLSupported || !scriptsLoaded
       ? {
           background: `
             linear-gradient(135deg, 
@@ -218,7 +195,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
       <div ref={vantaRef} className={`absolute inset-0 bg-forest-900 ${className}`} style={fallbackStyle} />
 
       {/* Add CSS animation for gradient fallback */}
-      {(isMobile || !webGLSupported) && (
+      {(isMobile || !webGLSupported || !scriptsLoaded) && (
         <style jsx>{`
           @keyframes gradientShift {
             0% { background-position: 0% 50%; }
