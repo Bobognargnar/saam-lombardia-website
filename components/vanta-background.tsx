@@ -172,21 +172,11 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
     }
   }, [scriptsLoaded, isMobile, webGLSupported])
 
-  // CSS gradient fallback for mobile, when WebGL is not supported, or when scripts fail to load
+  // Simple background color fallback for mobile, when WebGL is not supported, or when scripts fail to load
   const fallbackStyle =
     isMobile || !webGLSupported || !scriptsLoaded
       ? {
-          background: `
-            linear-gradient(135deg, 
-              #18230f 0%, 
-              #1f2f16 25%, 
-              #1f7d53 50%, 
-              #1f2f16 75%, 
-              #18230f 100%
-            )
-          `,
-          backgroundSize: "400% 400%",
-          animation: "gradientShift 15s ease infinite",
+          backgroundColor: "#18230f", // forest-900 color
         }
       : {}
 
@@ -194,16 +184,7 @@ export default function VantaBackground({ className = "" }: VantaBackgroundProps
     <>
       <div ref={vantaRef} className={`absolute inset-0 bg-forest-900 ${className}`} style={fallbackStyle} />
 
-      {/* Add CSS animation for gradient fallback */}
-      {(isMobile || !webGLSupported || !scriptsLoaded) && (
-        <style jsx>{`
-          @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-          }
-        `}</style>
-      )}
+
     </>
   )
 }

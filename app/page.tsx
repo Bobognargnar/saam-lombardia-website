@@ -7,6 +7,7 @@ import LocationMap from "@/components/location-map"
 import ScrollToSection from "@/components/scroll-to-section"
 import InstructorCarousel from "@/components/instructor-carousel"
 import VantaBackground from "@/components/vanta-background"
+import WhatsAppButton from "@/components/ui/whatsapp-button"
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog"
 import { useState } from "react"
 import { Analytics } from '@vercel/analytics/next';
@@ -36,7 +37,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-forest-900 text-white">
       <Analytics />
       <ScrollToSection />
-      <header className="bg-forest-900 text-white z-10 relative border-b border-forest-800 sticky top-0">
+      <header className="bg-forest-900 text-white z-50 relative border-b border-forest-800 sticky top-0">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <Image
@@ -101,9 +102,9 @@ export default function Home() {
           <VantaBackground />
 
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-forest-900/40 z-10"></div>
+          <div className="absolute inset-0 bg-forest-900/40 z-5"></div>
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-20">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider drop-shadow-lg">CORSI DI SCHERMA</h2>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-wider drop-shadow-lg">ANTICA E MEDIEVALE</h2>
             <p className="text-xl md:text-2xl tracking-wide mb-8 drop-shadow-md">MILANO, LECCO, CREMONA, VARESE</p>
@@ -242,10 +243,13 @@ export default function Home() {
                         <p>Martedì e Giovedì: 20:00 - 22:00</p>
                       </div>
                     </div>
-                    <div className="flex items-start">
+                    {/* <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Sede ancora da confermare per l'anno 2025</span>
-                    </div>
+                      <span>Entrata qui:</span>
+                      <Link href="https://maps.app.goo.gl/n1qb6D3MKFNgE5YBA" target="_blank" rel="noopener noreferrer">
+                        <span>i.c. Buzzati</span>
+                      </Link>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -261,7 +265,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Corso Avanzato 1</h3>
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano, Corso Avanzato</h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -270,19 +274,19 @@ export default function Home() {
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Martedì e Mercoledì: 20:00 - 22:00</p>
+                        <p>Martedì, Mercoledì e Giovedì: 20:00 - 22:00</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Sede ancora da confermare per l'anno 2025</span>
+                      <span>Il corso avanzato è riservato a chi ha già superato il corso base</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Milano via Colletta */}
-              <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
+              {/* <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
                   <LocationMap
                     latitude={45.448815}
@@ -310,7 +314,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Lecco Malgrate */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
@@ -335,10 +339,10 @@ export default function Home() {
                         <p>Mercoledì, Venerdì: 20:00 - 22:00</p>
                       </div>
                     </div>
-                    <div className="flex items-start">
+                    {/* <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <span>Sede ancora da confermare per l'anno 2025</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -347,10 +351,11 @@ export default function Home() {
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
                   <LocationMap
-                    latitude={45.8478182}
-                    longitude={9.3749885}
-                    title="Indirizzo da confermare"
+                    latitude={45.116667}
+                    longitude={10.033333}
+                    // title="Indirizzo da confermare"
                     className="w-full h-full"
+                    zoom={9}
                   />
                 </div>
                 <div className="p-6">
@@ -417,13 +422,59 @@ export default function Home() {
               Sei interessato a scoprire l'arte della scherma storica? Vieni a trovarci in una delle nostre sedi per una
               lezione di prova gratuita!
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Link
                 href="mailto:info@marozzoLombardia.it"
                 className="bg-white hover:bg-gray-100 text-forest-600 px-8 py-3 rounded-2xl uppercase font-medium tracking-wider transition-colors"
               >
-                Contattaci
+                Scrivici
               </Link>
+            </div>
+
+            {/* Contact Information by City */}
+            <div className="max-w-6xl mx-auto">
+              <h3 className="text-2xl font-semibold mb-8 text-white">Oppure chiamaci</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Milano */}
+                <div className="text-center">
+                  <h4 className="text-xl font-bold mb-3 text-white">Milano</h4>
+                  <div className="w-12 h-0.5 bg-white/30 mx-auto mb-3"></div>
+                                      <div className="space-y-2 text-white">
+                      <p className="font-medium">Fabrizio</p>
+                      <WhatsAppButton phoneNumber="+39 3498661112" />
+                    </div>
+                </div>
+
+                {/* Lecco */}
+                <div className="text-center">
+                  <h4 className="text-xl font-bold mb-3 text-white">Lecco</h4>
+                  <div className="w-12 h-0.5 bg-white/30 mx-auto mb-3"></div>
+                                      <div className="space-y-2 text-white">
+                      <p className="font-medium">Davide</p>
+                      <WhatsAppButton phoneNumber="+39 3498632304" />
+                    </div>
+                </div>
+
+                {/* Cremona */}
+                <div className="text-center">
+                  <h4 className="text-xl font-bold mb-3 text-white">Cremona</h4>
+                  <div className="w-12 h-0.5 bg-white/30 mx-auto mb-3"></div>
+                                      <div className="space-y-2 text-white">
+                      <p className="font-medium">Marco</p>
+                      <WhatsAppButton phoneNumber="+39 3473226550" />
+                    </div>
+                </div>
+
+                {/* Varese */}
+                <div className="text-center">
+                  <h4 className="text-xl font-bold mb-3 text-white">Varese</h4>
+                  <div className="w-12 h-0.5 bg-white/30 mx-auto mb-3"></div>
+                                      <div className="space-y-2 text-white">
+                      <p className="font-medium">Davide</p>
+                      <WhatsAppButton phoneNumber="+39 3336412403" />
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

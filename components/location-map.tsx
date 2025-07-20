@@ -7,9 +7,10 @@ interface LocationMapProps {
   longitude: number
   title?: string
   className?: string
+  zoom?: number
 }
 
-export default function LocationMap({ latitude, longitude, title = "", className = "" }: LocationMapProps) {
+export default function LocationMap({ latitude, longitude, title = "", className = "", zoom = 15 }: LocationMapProps) {
   const mapRef = useRef<HTMLDivElement>(null)
   const mapInstanceRef = useRef<any>(null)
 
@@ -50,7 +51,7 @@ export default function LocationMap({ latitude, longitude, title = "", className
         const coords = [latitude, longitude]
 
         // Create map instance
-        mapInstanceRef.current = L.map(mapRef.current, { scrollWheelZoom: false }).setView(coords, 15)
+        mapInstanceRef.current = L.map(mapRef.current, { scrollWheelZoom: false }).setView(coords, zoom)
 
         // Add OpenStreetMap tiles
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -75,7 +76,7 @@ export default function LocationMap({ latitude, longitude, title = "", className
         mapInstanceRef.current = null
       }
     }
-  }, [latitude, longitude, title])
+      }, [latitude, longitude, title, zoom])
 
   return (
     <div className={`w-full h-full ${className}`}>
