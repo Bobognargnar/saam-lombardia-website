@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/logo/saam_lombardia_logo.svg',
-        width: 120,
-        height: 120,
-        alt: 'SAAM Lombardia Logo',
+        url: '/images/logo/favicon-96x96.png',
+        width: 96,
+        height: 96,
+        alt: 'SAAM Lombardia Favicon',
       },
     ],
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "SAAM Lombardia - Sala d'Arme Achille Marozzo",
     description: "Corsi di scherma antica e medievale a Milano, Lecco, Cremona e Varese",
-    images: ['/images/logo/saam_lombardia_logo.svg'],
+    images: ['/images/logo/favicon-96x96.png'],
   },
   verification: {
     google: "8I6jF-si9ixcT55N5Krdk150qSORCTXUW0rwxTS270c",
@@ -75,7 +75,7 @@ const structuredData = {
   "alternateName": "SAAM Lombardia",
   "description": "Scuola di scherma storica e medievale in Lombardia",
   "url": "https://saam-lombardia.vercel.app",
-  "logo": "https://saam-lombardia.vercel.app/images/logo/saam_lombardia_logo.svg",
+  "logo": "https://saam-lombardia.vercel.app/images/logo/favicon.svg",
   "parentOrganization": {
     "@type": "Organization",
     "name": "Sala d'Arme Achille Marozzo",
@@ -129,9 +129,13 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#18230F" />
         <meta name="msapplication-TileColor" content="#18230F" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/logo/favicon-96x96.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/logo/web-app-manifest-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/images/logo/web-app-manifest-512x512.png" />
+        <link rel="manifest" href="/images/logo/site.webmanifest" />
         <meta name="application-name" content="SAAM Lombardia" />
         <meta name="apple-mobile-web-app-title" content="SAAM Lombardia" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
