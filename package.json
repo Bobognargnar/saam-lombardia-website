@@ -1,6 +1,23 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "saam-lombardia",
+  "version": "1.0.0",
+  "description": "SAAM Lombardia - Sala d'Arme Achille Marozzo - Sito web ufficiale per corsi di scherma storica e medievale in Lombardia",
+  "keywords": [
+    "scherma-storica",
+    "scherma-medievale", 
+    "art-marziali",
+    "achille-marozzo",
+    "lombardia",
+    "milano",
+    "lecco",
+    "cremona",
+    "varese",
+    "nextjs",
+    "react",
+    "tailwindcss"
+  ],
+  "author": "SAAM Lombardia",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "next build",

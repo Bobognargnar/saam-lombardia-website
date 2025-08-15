@@ -1,0 +1,39 @@
+{
+  "name": "SAAM Lombardia - Sala d'Arme Achille Marozzo",
+  "short_name": "SAAM Lombardia",
+  "description": "Corsi di scherma storica e medievale a Milano, Lecco, Cremona e Varese",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18230F",
+  "theme_color": "#18230F",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "it",
+  "categories": ["sports", "education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/images/logo/saam_lombardia_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo/saam_lombardia_logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/logo/saam_lombardia_logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/logo/saam_lombardia_logo.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ]
+}

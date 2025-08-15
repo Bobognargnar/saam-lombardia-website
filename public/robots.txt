@@ -1,8 +1,32 @@
 User-agent: *
 Allow: /
 
+# Block access to admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow access to important resources
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+
 # Sitemap
 Sitemap: https://saam-lombardia.vercel.app/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2 
