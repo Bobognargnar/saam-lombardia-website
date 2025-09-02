@@ -240,7 +240,7 @@ export default function Home() {
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Martedì e Giovedì: 20:00 - 22:00</p>
+                        <p>Lunedì e Giovedì: 20:00 - 22:00</p>
                       </div>
                     </div>
                     {/* <div className="flex items-start">
@@ -269,7 +269,11 @@ export default function Home() {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Presso i.c. Buzzati - Via Feltre, 68/1, Milano</span>
+                      <span>Martedì e Mercoledì presso i.c. Buzzati - Via Feltre, 68/1, Milano</span>
+                    </div>
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Giovedì Via Pini, 3, Milano</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -279,49 +283,18 @@ export default function Home() {
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Il corso avanzato è riservato a chi ha già superato il corso base</span>
+                      <span>Il corso avanzato è riservato a chi ha già superato il corso base.</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Milano via Colletta */}
-              {/* <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
-                <div className="h-64 relative">
-                  <LocationMap
-                    latitude={45.448815}
-                    longitude={9.211822}
-                    title="Milano, via Pietro Colletta 48"
-                    className="w-full h-full"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-forest-500">Milano Corso Avanzato 2</h3>
-                  <div className="space-y-3 text-gray-300">
-                    <div className="flex items-start">
-                      <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Presso i.c. Colletta - Via Pietro Colletta, 48, Milano</span>
-                    </div>
-                    <div className="flex items-start">
-                      <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p>Lunedì: 21:00 - 23:00</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Sede ancora da confermare per l'anno 2025</span>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-
               {/* Lecco Malgrate */}
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
                   <LocationMap
-                    latitude={45.8478182}
-                    longitude={9.3749885}
+                    latitude={45.8485972}
+                    longitude={9.3756533}
                     title="Malgrate (LC), via Gaggio 3"
                     className="w-full h-full"
                   />
@@ -331,18 +304,18 @@ export default function Home() {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Via Gaggio, 3, Malgrate (LC)</span>
+                      <span>Presso la Scuola Media Aldo Moro - Via Gaggio, 2, Malgrate (LC)</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Mercoledì, Venerdì: 20:00 - 22:00</p>
+                        <p>Martedì, Mercoledì, Venerdì: 21:00 - 23:00</p>
                       </div>
                     </div>
-                    {/* <div className="flex items-start">
+                    <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Sede ancora da confermare per l'anno 2025</span>
-                    </div> */}
+                      <span>Corso Base Martedì e Mercoledì.</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -351,11 +324,11 @@ export default function Home() {
               <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
                 <div className="h-64 relative">
                   <LocationMap
-                    latitude={45.116667}
-                    longitude={10.033333}
+                    latitude={45.13173431914459}
+                    longitude={10.027623323120137}
                     // title="Indirizzo da confermare"
                     className="w-full h-full"
-                    zoom={9}
+                    // zoom={9}
                   />
                 </div>
                 <div className="p-6">
@@ -363,21 +336,53 @@ export default function Home() {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Cremona (CR)</span>
+                      <span>Presso le scuole Realdo Colombo, ingresso da via XI febbraio, Cremona (CR)</span>
                     </div>
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Mercoledì, Venerdì: 20:00 - 22:00</p>
+                        <p>Mercoledì, Giovedì: 20:00 - 22:00</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Sede ancora da confermare per l'anno 2025</span>
+                      <span>Ingresso da via XI febbraio.</span>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Varese  */}
+              <div className="bg-forest-800 rounded-2xl overflow-hidden shadow-lg border border-forest-800 hover:border-forest-600 transition-all duration-300 hover:scale-105 transform">
+                <div className="h-64 relative">
+                  <LocationMap
+                    latitude={45.819018861051426}
+                    longitude={8.818342753218971}
+                    className="w-full h-full"
+                    // zoom={12}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-forest-500">Varese, Corso Base</h3>
+                  <div className="space-y-3 text-gray-300">
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Presso ISISS Daverio Casula, via Mario Bertolone, 13, Varese (VA)</span>
+                    </div>
+                    <div className="flex items-start">
+                      <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p>Martedì, Giovedì: 20:30 - 22:30</p>
+                      </div>
+                    </div>
+                    {/* <div className="flex items-start">
+                      <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span>Via Mario Bertolone, 13, 21100 Varese VA</span>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+              
             </div>
             <div className="text-center mb-16">
               <div className="w-20 h-1 bg-forest-500 mx-auto mt-4"></div>
@@ -394,7 +399,12 @@ export default function Home() {
                 .
               </p>
             </div>
+
+            
+
+
           </div>
+          
         </section>
 
         {/* Instructors Section */}
