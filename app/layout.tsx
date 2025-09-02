@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "SAAM Lombardia - Sala d'Arme Achille Marozzo | Corsi di Scherma Storica",
+  title: "Marozzo Lombardia",
   description: "Scopri i corsi di scherma antica e medievale a Milano, Lecco, Cremona e Varese. Lezioni di prova gratuite con istruttori qualificati.",
   keywords: "scherma storica, scherma medievale, scherma rinascimentale, arti marziali italiane, Achille Marozzo, Milano, Lecco, Cremona, Varese, corsi scherma, spada storica, scherma antica, duello storico, spada medievale, spada rinascimentale",
   authors: [{ name: "SAAM Lombardia" }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SAAM Lombardia - Sala d'Arme Achille Marozzo",
+    title: "Marozzo Lombardia",
     description: "Corsi di scherma antica e medievale a Milano, Lecco, Cremona e Varese",
     url: 'https://saam-lombardia.vercel.app',
     siteName: 'SAAM Lombardia',
