@@ -314,7 +314,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-start">
                       <Info className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span>Corso Base Martedì e Mercoledì.</span>
+                      <span>Corso Base Martedì e Venerdì.</span>
                     </div>
                   </div>
                 </div>
@@ -341,7 +341,7 @@ export default function Home() {
                     <div className="flex items-start">
                       <Clock className="h-5 w-5 text-forest-500 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p>Mercoledì, Giovedì: 20:00 - 22:00</p>
+                        <p>Martedì, Giovedì: 20:00 - 22:00</p>
                       </div>
                     </div>
                     <div className="flex items-start">
